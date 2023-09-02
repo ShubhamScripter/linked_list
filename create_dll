@@ -1,0 +1,31 @@
+Node* constructDLL(vector<int>& arr) {
+    
+    Node* head=0;
+    Node* prev1=0;
+
+    for(auto e:arr)
+    {
+
+        auto newnode=new Node(e);
+
+        if(!head)
+        {
+            head=prev1=newnode;
+        }
+        else
+        {
+            prev1->next=newnode;
+            newnode->prev=prev1;
+            prev1=newnode;
+        }
+    }
+
+
+return head;
+    
+
+
+
+
+
+}
