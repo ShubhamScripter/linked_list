@@ -1,0 +1,23 @@
+
+// iterating method
+int length(Node *head)
+{
+	int count=0;
+    while(head)
+    {
+        head=head->next;
+        count++;
+    }
+
+    return count;
+}
+
+//recursive method
+
+int length(Node *head)
+{
+if(!head)
+return 0;
+	
+    return lenght(head->next);
+}
