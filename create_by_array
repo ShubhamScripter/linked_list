@@ -1,0 +1,16 @@
+Node* head=0;
+    Node* temp=0;
+    for(auto e:arr)
+    {
+        auto newnode=new Node(e);
+        if(!head)
+        {
+            head=temp=newnode;
+        }
+        else
+        {
+            temp->next=newnode;
+            temp=newnode;
+        }
+    }
+    return head;
