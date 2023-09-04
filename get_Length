@@ -19,5 +19,5 @@ int length(Node *head)
 if(!head)
 return 0;
 	
-    return lenght(head->next);
+    return 1+length(head->next);
 }
