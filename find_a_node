@@ -1,0 +1,12 @@
+int searchInLinkedList(Node<int> *head, int k) {
+   
+   if(!head)
+   return false;
+
+   if(head->data==k || searchInLinkedList(head->next,k))
+   return true;
+   return false;
+
+
+
+}
