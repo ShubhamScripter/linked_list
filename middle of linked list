@@ -1,0 +1,40 @@
+1. Appproach 
+
+int find_length(ListNode* head)
+    {
+        if(!head) return 0;
+        return 1+find_length(head->next);
+    }
+    ListNode* middleNode(ListNode* head) {
+
+        int len=find_length(head);
+        int count=0;
+        ListNode* temp=head;
+
+        while(temp)
+        {
+            if(count==len/2) return temp;
+            temp=temp->next;count++;
+        }
+
+        return temp;
+        
+    }
+
+
+
+2. approach
+
+ListNode* middleNode(ListNode* head) {
+
+        ListNode* fast=head;ListNode* slow=head;
+
+        while(fast and fast->next)
+        {
+            fast=fast->next->next;
+            slow=slow->next;
+        }
+
+    return slow;
+        
+    }
